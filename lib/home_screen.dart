@@ -36,8 +36,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ElevatedButton(
               onPressed: () async {
                 await supabase.auth.signOut();
-                setState(() {});
-                print('ATIVE SES HHHH: $activeSession');
                 Navigator.pushNamed(context, '/');
               },
               child: const Text('Sign out'),
